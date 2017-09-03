@@ -10,7 +10,15 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Dodaj do siebie dwie losowe liczby");
+            string log = "admin";
+            string pass = "admin";
+            
+            
+            Console.WriteLine("Podaj login"); 
+            log = Console.ReadLine();
+
+            Console.WriteLine("Podaj hasło");
+            pass = Console.ReadLine(); 
 
 
         }
