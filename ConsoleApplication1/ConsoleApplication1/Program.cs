@@ -10,6 +10,23 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine("Ile masz lat?");
+
+            string age;
+
+            age = Console.ReadLine();
+
+            Console.WriteLine("Mam " + age + " lat.");
+            Console.ReadLine();
+
+            System.Console.WriteLine("Jak masz na imię?");
+
+            string name;
+
+            name = Console.ReadLine();
+
+            Console.WriteLine("Nazywam się " +name+ ".");
+            Console.ReadLine();
         }
     }
 }
