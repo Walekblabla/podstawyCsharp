@@ -12,13 +12,16 @@ namespace ConsoleApplication1
         {
             string log = "admin";
             string pass = "admin";
-            
-            
+
+            string log1;
+            string pass1; 
+
+            if(log1 = log)
             Console.WriteLine("Podaj login"); 
-            log = Console.ReadLine();
+            log1 = Console.ReadLine();
 
             Console.WriteLine("Podaj hasło");
-            pass = Console.ReadLine(); 
+            pass1 = Console.ReadLine(); 
 
 
         }
