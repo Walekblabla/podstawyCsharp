@@ -8,54 +8,35 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        static int RandAdd(int num1, int num2)
+
+        {
+
+            Random rnd = new Random();
+
+            int Number1 = rnd.Next(num1, num2);
+
+            int Number2 = rnd.Next(num1, num2);
+
+            Console.WriteLine(Number1 + " " + Number2);
+
+            return Number1 + Number2;
+
+        }
+
         static void Main(string[] args)
-
         {
+            Console.WriteLine("Wpisz zakres dwóch losowych liczb do zsumowania.");
 
-            int userInpMin = 0;
+            int Num1 = int.Parse(Console.ReadLine());
 
-            int userInpMax = 0;
+            int Num2 = int.Parse(Console.ReadLine());
 
-            Input("Type min number: ", ref userInpMin);
+            Console.WriteLine(RandAdd(Num1, Num2));
 
-            Input("Type max number: ", ref userInpMax);
-
-            AddRandomNumbers(userInpMin, userInpMax);
-
-
-
-            Console.ReadLine();
-
+            Console.ReadKey();
         }
 
 
-
-        static void AddRandomNumbers(int min, int max)
-
-        {
-
-            Random random = new Random();
-
-            int num1 = random.Next(min, max);
-
-            int num2 = random.Next(min, max);
-
-            Console.WriteLine($"First random number: {num1}. Second random number: {num2}");
-
-            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
-
-        }
-
-
-
-        static void Input(string description, ref int inputVariable)
-
-        {
-
-            Console.Write(description);
-
-            inputVariable = Convert.ToInt32(Console.ReadLine());
-
-        }
     }
 }
