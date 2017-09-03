@@ -25,16 +25,21 @@ namespace ConsoleApplication1
         }
 
         static void Main(string[] args)
+
         {
-            Console.WriteLine("Wpisz zakres dwóch losowych liczb do zsumowania.");
 
-            int Num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Wpisz proszę zakres dwóch losowych liczb do zsumowania.");
 
-            int Num2 = int.Parse(Console.ReadLine());
+            int Num1, Num2;
+
+            while (!((int.TryParse(Console.ReadLine(), out Num1)) && (int.TryParse(Console.ReadLine(), out Num2))))
+
+                Console.WriteLine("Spróbuj jeszcze raz. Pamiętaj, aby wprowadzić dwie liczby w osobnych linijkach.");
 
             Console.WriteLine(RandAdd(Num1, Num2));
 
             Console.ReadKey();
+
         }
 
 
